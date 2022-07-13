@@ -23,6 +23,7 @@
 	</dict>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>youla</string>
 		<string>vseapteki</string>
 		<string>cloudmailru</string>
 		<string>citydrive</string>

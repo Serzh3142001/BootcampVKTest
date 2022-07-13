@@ -50,17 +50,14 @@ class ServiceTableViewCell: UITableViewCell {
             .left(12)
             .height(65)
             .width(65)
-        
     }
     
     private func setup() {
         titleLabel.font = .systemFont(ofSize: 20, weight: .bold)
-//        titleLabel.textColor = .black
         titleLabel.numberOfLines = 1
         titleLabel.textAlignment = .left
         
         descriptionLabel.font = .systemFont(ofSize: 14, weight: .medium)
-//        descriptionLabel.textColor = .black
         descriptionLabel.numberOfLines = 3
         descriptionLabel.textAlignment = .left
         
@@ -68,32 +65,11 @@ class ServiceTableViewCell: UITableViewCell {
             contentView.addSubview($0)
         }
         contentView.addSubview(imgService)
-        
-//        contentView.addSubview(containerView)
     }
     
     func config(with service: Service) {
-        
-//        let fullTime = String("\(NSDate())".split(separator: " ")[1])
-//        let time = "\(((Int(fullTime.split(separator: ":")[0]) ?? -1) + city.timeDelta)%24):\(fullTime[fullTime.index(fullTime.startIndex, offsetBy: 3)...])"
         titleLabel.text = service.name
         descriptionLabel.text = service.description
         imgService.kf.setImage(with: URL(string: service.icon_url), placeholder: nil, options: nil, completionHandler: nil)
-        
-//        guard let url = city.imageUrl else {
-//            return
-//        }
-//
-//        let data = try? Data(contentsOf: url)
-//
-//        guard let data = data else {
-//            return
-//        }
-//
-//        img.image = UIImage(data: data)
-        
-        selectionStyle = .none
-        
-        
     }
 }
