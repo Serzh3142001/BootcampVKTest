@@ -123,9 +123,23 @@ extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
         guard let url = URL(string: service.link) else { return }
         
 //        let path = "vk://"
-        let path = "\(service.link.split(separator: "/")[1].split(separator: ".")[0])://"
-        print(path)
-        let appUrl = URL(string: path)!
+        var path = "\(service.link.split(separator: "/")[1].split(separator: ".")[0])://"
+        
+        switch path {
+        case "my://":
+            path = "mygamesapp://"
+            break
+        case "cloud://":
+            path = "cloudmailru://"
+            break
+        case "calendar://":
+            path = ""
+            break
+        default:
+            break
+        }
+        
+        let appUrl = URL(string: path) ?? url
         
         if application.canOpenURL(appUrl) {
             application.open(appUrl)

@@ -23,6 +23,12 @@
 	</dict>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>vseapteki</string>
+		<string>cloudmailru</string>
+		<string>citydrive</string>
+		<string>mygamesapp</string>
+		<string>sferum</string>
+		<string>samokat</string>
 		<string>vk</string>
 	</array>
 </dict>
