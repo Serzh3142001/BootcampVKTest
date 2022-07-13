@@ -16,8 +16,10 @@ class ServicesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.prefersLargeTitles = true
-        
+//        navigationController?.navigationBar.prefersLargeTitles = true
+//        navigationItem.rightBarButtonItem = .init(barButtonSystemItem: .add, target: self, action: #selector(didPullToRefresh))
+//        navigationController?.navigationBar.titleTextAttributes
+//
         view.addSubview(tableView)
 //        tableView.separatorStyle = .none
         tableView.frame = view.bounds
@@ -32,7 +34,18 @@ class ServicesViewController: UIViewController {
 //        tableView.refreshControl?.endRefreshing()
 //        tableView.delegate = self
 //        tableView.dataSource = self
-        title = "Сервисы VK"
+//        title = "Сервисы VK"
+        let tlabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        tlabel.text = "Сервисы VK"
+//        tlabel.textColor = UIColor.white
+        tlabel.font = UIFont.systemFont(ofSize: 25, weight: .medium)
+        tlabel.backgroundColor = UIColor.clear
+        tlabel.adjustsFontSizeToFitWidth = true
+        tlabel.textAlignment = .center
+        navigationItem.titleView = tlabel
+
+//        title.
+        
         
         loadData() {
             self.tableView.refreshControl?.endRefreshing()
@@ -43,15 +56,15 @@ class ServicesViewController: UIViewController {
 
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-//        tableView.pin
-//            .top(0)
-//            .bottom(0)
-//            .left(0)
-//            .right(0)
-    }
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//
+////        tableView.pin
+////            .top(0)
+////            .bottom(0)
+////            .left(0)
+////            .right(0)
+//    }
     
     private func loadData(compl: (() -> Void)? = nil) {
         NetworkManager.shared.loadServices(urlString: dataURL) { [weak self] result in
@@ -103,10 +116,28 @@ extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let application = UIApplication.shared
+        
         let service = services[indexPath.row]
         guard let url = URL(string: service.link) else { return }
         
-        UIApplication.shared.open(url)
+//        let path = "vk://"
+        let path = "\(service.link.split(separator: "/")[1].split(separator: ".")[0])://"
+        print(path)
+        let appUrl = URL(string: path)!
+        
+        if application.canOpenURL(appUrl) {
+            application.open(appUrl)
+        } else {
+            application.open(url)
+        }
+        
+        
+//        let service = services[indexPath.row]
+//        guard let url = URL(string: service.link) else { return }
+//
+//        UIApplication.shared.open(url)
     }
     
     //высота ячейки
