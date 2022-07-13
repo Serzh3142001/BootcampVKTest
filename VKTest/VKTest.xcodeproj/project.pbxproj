@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		B3CC22BD287E3D4300A5BE29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC22BC287E3D4300A5BE29 /* AppDelegate.swift */; };
 		B3CC22BF287E3D4300A5BE29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC22BE287E3D4300A5BE29 /* SceneDelegate.swift */; };
-		B3CC22C1287E3D4300A5BE29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC22C0287E3D4300A5BE29 /* ViewController.swift */; };
+		B3CC22C1287E3D4300A5BE29 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC22C0287E3D4300A5BE29 /* ServicesViewController.swift */; };
 		B3CC22C4287E3D4300A5BE29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3CC22C2287E3D4300A5BE29 /* Main.storyboard */; };
 		B3CC22C6287E3D4600A5BE29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3CC22C5287E3D4600A5BE29 /* Assets.xcassets */; };
 		B3CC22C9287E3D4600A5BE29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3CC22C7287E3D4600A5BE29 /* LaunchScreen.storyboard */; };
+		B3CC22D7287E45E500A5BE29 /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC22D6287E45E500A5BE29 /* ServiceTableViewCell.swift */; };
+		B3CC22DA287E460800A5BE29 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B3CC22D9287E460800A5BE29 /* Kingfisher */; };
+		B3CC22DC287E470300A5BE29 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC22DB287E470300A5BE29 /* Request.swift */; };
+		B3CC22DE287E492600A5BE29 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC22DD287E492600A5BE29 /* NetworkManager.swift */; };
+		B3CC22E1287E4B0D00A5BE29 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B3CC22E0287E4B0D00A5BE29 /* PinLayout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B3CC22B9287E3D4300A5BE29 /* VKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CC22BC287E3D4300A5BE29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3CC22BE287E3D4300A5BE29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B3CC22C0287E3D4300A5BE29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B3CC22C0287E3D4300A5BE29 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		B3CC22C3287E3D4300A5BE29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3CC22C5287E3D4600A5BE29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3CC22C8287E3D4600A5BE29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3CC22CA287E3D4600A5BE29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3CC22D6287E45E500A5BE29 /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
+		B3CC22DB287E470300A5BE29 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		B3CC22DD287E492600A5BE29 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3CC22E1287E4B0D00A5BE29 /* PinLayout in Frameworks */,
+				B3CC22DA287E460800A5BE29 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,11 +68,14 @@
 			children = (
 				B3CC22BC287E3D4300A5BE29 /* AppDelegate.swift */,
 				B3CC22BE287E3D4300A5BE29 /* SceneDelegate.swift */,
-				B3CC22C0287E3D4300A5BE29 /* ViewController.swift */,
+				B3CC22C0287E3D4300A5BE29 /* ServicesViewController.swift */,
 				B3CC22C2287E3D4300A5BE29 /* Main.storyboard */,
 				B3CC22C5287E3D4600A5BE29 /* Assets.xcassets */,
 				B3CC22C7287E3D4600A5BE29 /* LaunchScreen.storyboard */,
 				B3CC22CA287E3D4600A5BE29 /* Info.plist */,
+				B3CC22D6287E45E500A5BE29 /* ServiceTableViewCell.swift */,
+				B3CC22DB287E470300A5BE29 /* Request.swift */,
+				B3CC22DD287E492600A5BE29 /* NetworkManager.swift */,
 			);
 			path = VKTest;
 			sourceTree = "<group>";
@@ -83,6 +96,10 @@
 			dependencies = (
 			);
 			name = VKTest;
+			packageProductDependencies = (
+				B3CC22D9287E460800A5BE29 /* Kingfisher */,
+				B3CC22E0287E4B0D00A5BE29 /* PinLayout */,
+			);
 			productName = VKTest;
 			productReference = B3CC22B9287E3D4300A5BE29 /* VKTest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,10 @@
 				Base,
 			);
 			mainGroup = B3CC22B0287E3D4300A5BE29;
+			packageReferences = (
+				B3CC22D8287E460800A5BE29 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B3CC22DF287E4B0D00A5BE29 /* XCRemoteSwiftPackageReference "PinLayout" */,
+			);
 			productRefGroup = B3CC22BA287E3D4300A5BE29 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3CC22C1287E3D4300A5BE29 /* ViewController.swift in Sources */,
+				B3CC22DE287E492600A5BE29 /* NetworkManager.swift in Sources */,
+				B3CC22C1287E3D4300A5BE29 /* ServicesViewController.swift in Sources */,
+				B3CC22D7287E45E500A5BE29 /* ServiceTableViewCell.swift in Sources */,
+				B3CC22DC287E470300A5BE29 /* Request.swift in Sources */,
 				B3CC22BD287E3D4300A5BE29 /* AppDelegate.swift in Sources */,
 				B3CC22BF287E3D4300A5BE29 /* SceneDelegate.swift in Sources */,
 			);
@@ -358,6 +382,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B3CC22D8287E460800A5BE29 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		B3CC22DF287E4B0D00A5BE29 /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/PinLayout";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B3CC22D9287E460800A5BE29 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B3CC22D8287E460800A5BE29 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		B3CC22E0287E4B0D00A5BE29 /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B3CC22DF287E4B0D00A5BE29 /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B3CC22B1287E3D4300A5BE29 /* Project object */;
 }
